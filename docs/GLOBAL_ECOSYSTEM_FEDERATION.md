@@ -1,7 +1,8 @@
 # Global Ecosystem Federation Blueprint
 
 **Program:** JUNGELIST MASSIVE / JM-SPACE-50  
-**Coordinator:** Jungelist Massive  
+**Program coordinator:** Jungelist Massive  
+**Existing architecture/manifest authority:** SAMBU  
 **Scope:** 15 repositories under `bboroski`  
 **Status:** Initial architecture baseline; implementation claims remain evidence-gated  
 **Updated:** 2026-11-13
@@ -14,13 +15,13 @@ This is a federation, not a source-code blender. A capability is shared through 
 
 ## 2. Control-plane responsibilities
 
-- **Jungelist Massive:** ecosystem-level architecture, language research, cross-project roadmap, integration acceptance criteria, and federation change proposals.
+- **Jungelist Massive:** cross-project roadmap, language research, integration proposals, and acceptance criteria; it coordinates work but does not supersede existing architecture authority.
 - **Klipot:** operator-facing repository catalog, dependency graph presentation, contract catalog, and status portal.
 - **Hellduck:** integrated workspace for its six source modules, migration verification, and workspace-level checks.
 - **Luci:** engineering-domain taxonomy and policy validation foundation.
-- **SAMBU:** language and scientific-modeling platform; its manifest and registry conventions are reused where compatible.
+- **SAMBU:** current authority for shared module-manifest conventions, canonical module registry, and ecosystem architecture; its language and scientific-modeling platform remains independently owned.
 
-These roles are complementary. None silently supersedes the local source of truth, release process, or safety authority of another repository.
+These roles are complementary. SAMBU remains the current authority for shared architecture and module-registry semantics; Klipot presents registry data; Hellduck federates workspace views; Jungelist Massive coordinates cross-project proposals. Any change to that authority requires an explicit reviewed governance decision.
 
 ## 3. Repository federation map
 
@@ -94,7 +95,7 @@ No blanket removal of interpreters, dynamic libraries, or virtual machines is au
 
 ### Wave A — Inventory and contracts
 - Complete purpose/build/license/maturity inventory for all 15 repositories.
-- Reconcile the canonical repository registry with Klipot and Hellduck.
+- Reconcile the SAMBU canonical module registry with Klipot and Hellduck; treat the JM inventory as a coordination snapshot.
 - Add missing manifests only after project owners and contracts are confirmed.
 - Resolve unknown project scope for 9circ and implementation maturity for BlopScore.
 
@@ -123,7 +124,7 @@ No blanket removal of interpreters, dynamic libraries, or virtual machines is au
 - [ ] Each repository's existing build/test/security workflows remain authoritative.
 - [ ] Contract tests exist for every claimed implemented integration.
 - [ ] Native-build claims match actual artifacts and target evidence.
-- [ ] Klipot and Hellduck consume the same canonical registry semantics.
+- [ ] Klipot and Hellduck consume the SAMBU canonical registry semantics; JM publishes a linked coordination snapshot.
 - [ ] Unknown, planned, partial, and implemented states are distinguishable.
 - [ ] Rollback and deprecation procedures are documented.
 - [ ] No branch protection, secrets, releases, deployments, or destructive operations are changed without explicit repository-level authorization.
@@ -139,7 +140,7 @@ No blanket removal of interpreters, dynamic libraries, or virtual machines is au
 ## 11. First execution backlog
 
 1. Inspect and reconcile the Klipot registry, Hellduck contracts, and SAMBU manifests.
-2. Define one canonical registry schema and a compatibility test fixture.
+2. Align with the existing SAMBU manifest/registry schema and add a compatibility test fixture; do not create a competing canonical schema.
 3. Add accurate manifests for repositories that lack one; do not invent missing project details.
 4. Add provider/consumer contract tests for each real integration edge.
 5. Establish a per-repository build/test matrix and artifact provenance.
