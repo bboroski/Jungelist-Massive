@@ -2,12 +2,12 @@
 
 **Ecosystem architecture coordinator · Language Foundry · Cross-repository engineering program**
 
-Jungelist Massive coordinates the federated architecture of the `bboroski` engineering ecosystem. It defines cross-project contracts, architecture layers, integration acceptance criteria, language/tooling research, and an evidence-based roadmap.
+Jungelist Massive coordinates cross-project proposals, language/tooling research, architecture layers, integration acceptance criteria, and an evidence-based roadmap. SAMBU remains the current authority for shared architecture and canonical module-registry semantics.
 
 ## Global federation
 
 - [Global Ecosystem Federation Blueprint](docs/GLOBAL_ECOSYSTEM_FEDERATION.md)
-- [Canonical 15-repository inventory](registry/ecosystem.json)
+- [15-repository coordination inventory](registry/ecosystem.json)
 
 ## Operating model
 
@@ -27,7 +27,7 @@ Native machine-code delivery, static linking, deterministic memory ownership, an
 
 ## Current status
 
-The federation inventory is a first-pass snapshot of 15 accessible repositories. Several projects need manifests or further discovery. Their unknowns are intentionally recorded rather than guessed. See the blueprint for adoption waves and acceptance criteria.
+The federation inventory is a first-pass coordination snapshot of 15 accessible repositories, not a competing canonical registry. SAMBU owns shared manifest/registry semantics; Klipot presents the catalog; Hellduck federates its workspace. Several projects need manifests or further discovery. Their unknowns are intentionally recorded rather than guessed. See the blueprint for adoption waves and acceptance criteria.
 
 ---
 **Build the connections. Preserve the boundaries. Verify every claim.**
