@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "architecture": "NUN Mesh Multi-Axis Layer Fabric (MALF)",
+  "repository": "bboroski/Jungelist-Massive",
+  "role": "Proposed desktop workbench for designing and generating new programming languages",
+  "maturity": "Repository shell with placeholder README; product architecture is proposed and not implemented.",
+  "layers": [
+    {
+      "id": "L0",
+      "name": "Experience",
+      "responsibility": "Desktop UI, CLI and operator workflows."
+    },
+    {
+      "id": "L1",
+      "name": "Contracts",
+      "responsibility": "Public APIs, schemas, project manifests, plugin descriptors and events."
+    },
+    {
+      "id": "L2",
+      "name": "Application orchestration",
+      "responsibility": "Use cases, workflows, command dispatch and lifecycle sequencing."
+    },
+    {
+      "id": "L3",
+      "name": "Domain kernel",
+      "responsibility": "Core domain models, deterministic algorithms and product invariants."
+    },
+    {
+      "id": "L4",
+      "name": "Policy and capabilities",
+      "responsibility": "Permissions, safety gates, trust, budgets and operation allowlists."
+    },
+    {
+      "id": "L5",
+      "name": "Ports and contracts",
+      "responsibility": "Abstract OS, hardware, compiler, storage and provider interfaces."
+    },
+    {
+      "id": "L6",
+      "name": "Adapters and platform",
+      "responsibility": "Concrete native OS, device, compiler and external-source implementations."
+    },
+    {
+      "id": "L7",
+      "name": "State and artifacts",
+      "responsibility": "Project state, configuration, registries, generated output and provenance."
+    },
+    {
+      "id": "L8",
+      "name": "Runtime and delivery",
+      "responsibility": "Build, packaging, deployment, process isolation and runtime composition."
+    },
+    {
+      "id": "L9",
+      "name": "Assurance and evidence",
+      "responsibility": "Tests, benchmarks, compatibility and target-qualification evidence."
+    }
+  ],
+  "placement": [
+    {
+      "layer": "L0",
+      "area": "Language foundry workspace",
+      "components": [
+        "desktop shell",
+        "grammar workbench",
+        "visual pipeline"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L1",
+      "area": "Language and plugin contracts",
+      "components": [
+        "language manifest",
+        "grammar schema",
+        "IR ABI",
+        "extension descriptors"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L2",
+      "area": "Foundry orchestration",
+      "components": [
+        "project wizard",
+        "generation pipeline",
+        "build orchestration"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L3",
+      "area": "Language design domain",
+      "components": [
+        "grammar model",
+        "type/semantic model",
+        "module model",
+        "memory/concurrency models"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L4",
+      "area": "Generation and execution policy",
+      "components": [
+        "generator policy",
+        "capability model",
+        "sandbox policy"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L5",
+      "area": "Compiler construction ports",
+      "components": [
+        "parser backend interface",
+        "IR pass interface",
+        "codegen interface",
+        "test-runner port"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L6",
+      "area": "Compiler and toolchain adapters",
+      "components": [
+        "native backend adapters",
+        "VM/runtime adapters",
+        "transpiler adapters"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L7",
+      "area": "Language projects and artifacts",
+      "components": [
+        "project registry",
+        "grammar corpus",
+        "generated artifacts"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L8",
+      "area": "Desktop/runtime delivery",
+      "components": [
+        "desktop runtime",
+        "build worker",
+        "packaging"
+      ],
+      "status": "proposed"
+    },
+    {
+      "layer": "L9",
+      "area": "Language conformance and compiler assurance",
+      "components": [
+        "conformance suite",
+        "fuzz corpus",
+        "IR verifier",
+        "backend test matrix"
+      ],
+      "status": "proposed"
+    }
+  ],
+  "vertical_slices": [
+    {
+      "id": "slice-1",
+      "title": "Create a new language",
+      "flow": "User intent → structured language spec → grammar/type/semantic validation → generated frontend → conformance fixtures → versioned project."
+    },
+    {
+      "id": "slice-2",
+      "title": "Compile a sample program",
+      "flow": "Source → lexer/parser → AST → semantic analysis → typed IR → verified transforms → backend adapter → artifact and diagnostics."
+    },
+    {
+      "id": "slice-3",
+      "title": "Add a new backend",
+      "flow": "Versioned backend contract → capability declaration → adapter implementation → differential tests → package compatibility gate."
+    },
+    {
+      "id": "slice-4",
+      "title": "Extension ecosystem",
+      "flow": "Extension manifest → trust/provenance check → permission review → isolated worker → bounded execution → audit record."
+    }
+  ],
+  "dependency_rules": [
+    "ui-and-cli-call-application-via-versioned-contracts",
+    "application-coordinates-domain-policy-and-ports",
+    "native-os-and-vendor-apis-contained-in-adapters",
+    "plugin-and-toolchain-effects-gated-and-isolated",
+    "state-and-artifacts-use-versioned-formats",
+    "runtime-composes-inner-layers",
+    "cross-repository-calls-require-versioned-contract"
+  ],
+  "cross_cutting": [
+    "security-and-consent",
+    "isolation-and-resource-budgets",
+    "reliability-and-cancellation",
+    "compatibility-and-versioning",
+    "observability-and-provenance",
+    "accessibility",
+    "measured-performance"
+  ],
+  "guardrails": "Treat all compiler backends, generated programs and extensions as untrusted until validated and isolated. Do not start by promising arbitrary automatic creation of production-ready languages. First ship a deterministic language-spec model, validator and one vertical compiler pipeline with tests. Never execute generated code in the desktop process by default.",
+  "status_note": "Proposed architecture only; verify future features with source, tests and platform evidence."
+}
