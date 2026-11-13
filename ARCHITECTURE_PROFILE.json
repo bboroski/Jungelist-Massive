@@ -1,0 +1,38 @@
+{
+  "schema_version": "bboroski.modular-monolith-profile.v1",
+  "project": "Jungelist-Massive",
+  "maturity": "scaffold-only",
+  "architecture": {
+    "mode": "scaffold",
+    "scope": "Repository placeholder with README and license; a language workbench, compiler pipeline and runtime are not yet evidenced.",
+    "runtime_boundary": "No executable application or build target is confirmed.",
+    "composition_rule": "Create a language specification, grammar, parser contract and test fixtures before attempting a monolithic implementation."
+  },
+  "entrypoints": [],
+  "components": [],
+  "dependencies": [],
+  "preserved_boundaries": [
+    "Do not infer a compiler or language runtime from the repository title.",
+    "Keep language specification, parser, semantic model and execution backend independently testable."
+  ],
+  "forbidden_composition": [
+    "No fabricated language features or working compiler claims.",
+    "No implicit runtime dependency on SAMBU or another project."
+  ],
+  "build_profiles": [
+    {
+      "id": "metadata-only",
+      "status": "not-yet-verified",
+      "commands": [],
+      "evidence": [
+        "README.md",
+        "LICENSE"
+      ]
+    }
+  ],
+  "gaps": [
+    "Define the language product scope and syntax charter.",
+    "Add grammar, lexer/parser and AST test fixtures.",
+    "Choose a build target and publish reproducible development instructions."
+  ]
+}
