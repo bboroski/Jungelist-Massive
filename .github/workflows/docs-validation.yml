@@ -1,0 +1,62 @@
+name: Documentation Validation
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/docs-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/docs-validation.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown-links:
+    name: Validate local Markdown links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Validate local Markdown links
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          files = [Path("README.md"), *Path("docs").rglob("*.md")]
+          files = [p for p in files if p.is_file()]
+          failures = []
+
+          for source in files:
+              text = source.read_text(encoding="utf-8")
+              for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", text):
+                  target = target.strip().split()[0].strip("<>")
+                  if not target or target.startswith(("#", "https://", "http://", "mailto:", "tel:")):
+                      continue
+                  path = target.split("#", 1)[0].split("?", 1)[0]
+                  if not path:
+                      continue
+                  resolved = (source.parent / path).resolve()
+                  if not resolved.exists():
+                      failures.append(f"{source}: missing local link target: {target}")
+
+          if failures:
+              print("\n".join(failures))
+              sys.exit(1)
+
+          print(f"Validated local Markdown links in {len(files)} file(s).")
+          PY
