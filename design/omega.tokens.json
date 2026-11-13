@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "system": "Jungelist Massive / OMEGA",
+  "scope": "Native language-design studio and compiler workbench",
+  "color": {
+    "canvas": "#090B0F",
+    "surface": "#11151C",
+    "surface_raised": "#171D26",
+    "surface_active": "#202A36",
+    "border": "#2A3542",
+    "text": "#F1F5F9",
+    "text_secondary": "#B7C3D0",
+    "text_muted": "#8493A4",
+    "accent": "#D8FF3E",
+    "accent_hover": "#E8FF83",
+    "dataflow": "#35D7F2",
+    "experimental": "#E879F9",
+    "success": "#4ADE80",
+    "warning": "#FBBF24",
+    "danger": "#FB7185",
+    "unknown": "#94A3B8"
+  },
+  "typography": {
+    "ui": ["Inter", "Segoe UI", "Roboto", "sans-serif"],
+    "code": ["JetBrains Mono", "Cascadia Code", "Fira Code", "monospace"],
+    "body_px": 14,
+    "code_px": 13,
+    "line_height": 1.5,
+    "tabular_numbers": true
+  },
+  "spacing_px": [4, 8, 12, 16, 20, 24, 32, 40, 48, 64],
+  "radii_px": {"control": 6, "panel": 10, "modal": 12, "pill": 999},
+  "motion_ms": {"micro": 100, "standard": 160, "panel": 220, "reduced_motion": 0},
+  "layout": {
+    "topbar_px": 48,
+    "navigation_px": 64,
+    "inspector_px": 320,
+    "minimum_hit_target_px": 44,
+    "editor_min_width_px": 420
+  },
+  "accessibility": {
+    "normal_text_contrast_min": 4.5,
+    "large_text_contrast_min": 3,
+    "keyboard_navigation": true,
+    "visible_focus": true,
+    "reduced_motion": true,
+    "state_not_color_only": true
+  },
+  "macro_knob": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "step_keyboard": 0.001,
+    "zones": [
+      {"id": "pristine", "start": 0.0, "end": 0.2},
+      {"id": "rhythmic", "start": 0.2, "end": 0.45},
+      {"id": "paradigm_shift", "start": 0.45, "end": 0.7},
+      {"id": "hyper_dense", "start": 0.7, "end": 0.9},
+      {"id": "esoteric_core", "start": 0.9, "end": 1.0}
+    ]
+  },
+  "performance": {
+    "report_percentiles": ["p50", "p95", "p99"],
+    "fps_is_measured_not_assumed": true,
+    "unknown_is_not_success": true
+  }
+}
