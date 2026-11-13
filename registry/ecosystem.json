@@ -1,0 +1,142 @@
+{
+  "schema_version": "jm.federation.registry.v1",
+  "updated": "2026-11-13",
+  "coordinator": "bboroski/Jungelist-Massive",
+  "catalog_source": "Klipot",
+  "workspace_federation": "bboroski/Hellduck",
+  "repositories": [
+    {
+      "id": "sambu-core",
+      "repository": "bboroski/SAMBU",
+      "role": "language-and-scientific-modeling",
+      "maturity": "experimental-alpha",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "toolng-diagnostics",
+      "repository": "bboroski/ToolNG",
+      "role": "windows-native-device-diagnostics",
+      "maturity": "native-desktop",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "reapercripple-hardware",
+      "repository": "bboroski/ReaperCripple",
+      "role": "embedded-bsp-firmware-calibration",
+      "maturity": "host-tested-core-hardware-validation-required",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "kloz-platform",
+      "repository": "bboroski/Kloz",
+      "role": "freestanding-platform-substrate",
+      "maturity": "host-tested-core",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "co-lifecycle",
+      "repository": "bboroski/CO",
+      "role": "deterministic-component-lifecycle",
+      "maturity": "host-tested-core",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "saintsi-assurance",
+      "repository": "bboroski/SaintSI",
+      "role": "runtime-assurance-observer",
+      "maturity": "host-tested-core",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "klipot-control-plane",
+      "repository": "bboroski/Klipot",
+      "role": "ecosystem-registry-and-operator-portal",
+      "maturity": "portal-and-browser-simulations",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "nun-kernel",
+      "repository": "bboroski/NUN",
+      "role": "early-x86_64-kernel-substrate",
+      "maturity": "early-kernel-bring-up",
+      "manifest": null,
+      "status": "manifest-needed"
+    },
+    {
+      "id": "nunlauncher-admission",
+      "repository": "bboroski/NUNLauncher",
+      "role": "kernel-image-admission-and-validation",
+      "maturity": "pre-handoff-image-admission",
+      "manifest": null,
+      "status": "manifest-needed"
+    },
+    {
+      "id": "fragile-baby-e2k",
+      "repository": "bboroski/Fragile-Baby",
+      "role": "elbrus-e2k-platform-qualification",
+      "maturity": "architecture-proposal-target-evidence-pending",
+      "manifest": null,
+      "status": "manifest-needed"
+    },
+    {
+      "id": "luci-engineering-control-plane",
+      "repository": "bboroski/Luci",
+      "role": "engineering-domain-policy-control-plane",
+      "maturity": "experimental-foundation",
+      "manifest": "sambu.module.json",
+      "status": "declared"
+    },
+    {
+      "id": "hellduck-workspace",
+      "repository": "bboroski/Hellduck",
+      "role": "six-module-engineering-workspace",
+      "maturity": "workspace-with-migration-verification",
+      "manifest": "moontreach.json",
+      "status": "declared"
+    },
+    {
+      "id": "blopscore-hardware-ui",
+      "repository": "bboroski/BlopScore",
+      "role": "native-windows-hardware-inspection-application-intent",
+      "maturity": "implementation-unverified",
+      "manifest": null,
+      "status": "manifest-needed"
+    },
+    {
+      "id": "9circ-unclassified",
+      "repository": "bboroski/9circ",
+      "role": "unclassified",
+      "maturity": "unknown",
+      "manifest": null,
+      "status": "discovery-required"
+    },
+    {
+      "id": "jungelist-massive-coordinator",
+      "repository": "bboroski/Jungelist-Massive",
+      "role": "ecosystem-architecture-and-language-foundry",
+      "maturity": "bootstrap",
+      "manifest": null,
+      "status": "coordinator-bootstrap"
+    }
+  ],
+  "invariants": [
+    "Independent repositories retain source ownership and release lifecycles.",
+    "Integration occurs through versioned APIs, schemas, adapters, or verified artifacts.",
+    "A registry declaration is not evidence of runtime integration.",
+    "Unknown project purpose and maturity remain explicitly unknown.",
+    "SAMBU remains the current authority for shared module-manifest and canonical registry semantics.",
+    "This JM inventory is a coordination snapshot and must not be treated as a competing canonical registry."
+  ],
+  "registry_kind": "coordination-snapshot",
+  "architecture_authority": "bboroski/SAMBU",
+  "canonical_module_registry": "https://github.com/bboroski/SAMBU/blob/main/ecosystem/registry.json",
+  "canonical_manifest_schema": "https://github.com/bboroski/SAMBU/blob/main/ecosystem/module.schema.json",
+  "catalog_projection": "bboroski/Klipot"
+}

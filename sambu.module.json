@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "ecosystem": "SAMBU",
+  "module_id": "jungelist-massive-coordinator",
+  "repository": "bboroski/Jungelist-Massive",
+  "display_name": "Jungelist Massive",
+  "version": "0.1.0-alpha",
+  "role": "cross-repository-architecture-and-language-foundry-coordination",
+  "runtime": [
+    "Documentation-first architecture and roadmap coordination"
+  ],
+  "maturity": "bootstrap",
+  "provides": [
+    "cross-repository-roadmap-proposals-v1",
+    "federation-architecture-proposals-v1",
+    "language-foundry-research-specifications-v1"
+  ],
+  "consumes": [
+    "sambu-module-manifest-v1",
+    "versioned-adapter-descriptors",
+    "evidence-reports"
+  ],
+  "dependencies": [],
+  "boundaries": [
+    "Jungelist Massive coordinates proposals and does not supersede SAMBU canonical architecture or registry authority.",
+    "This repository is not yet a verified language compiler or desktop application runtime.",
+    "A proposal, registry entry, or specification is not proof of implemented integration.",
+    "No repository code is executed or modified automatically by this coordinator."
+  ],
+  "verification": {
+    "host_tests": "No application build or test suite has been verified for this documentation-first bootstrap.",
+    "target_validation": "Not applicable to the current architecture and roadmap coordination scope.",
+    "evidence": [
+      "README.md",
+      "docs/GLOBAL_ECOSYSTEM_FEDERATION.md",
+      "registry/ecosystem.json"
+    ]
+  }
+}
