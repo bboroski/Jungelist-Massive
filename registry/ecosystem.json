@@ -3,7 +3,7 @@
   "updated": "2026-11-13",
   "coordinator": "bboroski/Jungelist-Massive",
   "catalog_source": "Klipot",
-  "workspace_federation": "Hellduck",
+  "workspace_federation": "bboroski/Hellduck",
   "repositories": [
     {
       "id": "sambu-core",
@@ -130,6 +130,13 @@
     "Independent repositories retain source ownership and release lifecycles.",
     "Integration occurs through versioned APIs, schemas, adapters, or verified artifacts.",
     "A registry declaration is not evidence of runtime integration.",
-    "Unknown project purpose and maturity remain explicitly unknown."
-  ]
+    "Unknown project purpose and maturity remain explicitly unknown.",
+    "SAMBU remains the current authority for shared module-manifest and canonical registry semantics.",
+    "This JM inventory is a coordination snapshot and must not be treated as a competing canonical registry."
+  ],
+  "registry_kind": "coordination-snapshot",
+  "architecture_authority": "bboroski/SAMBU",
+  "canonical_module_registry": "https://github.com/bboroski/SAMBU/blob/main/ecosystem/registry.json",
+  "canonical_manifest_schema": "https://github.com/bboroski/SAMBU/blob/main/ecosystem/module.schema.json",
+  "catalog_projection": "bboroski/Klipot"
 }
